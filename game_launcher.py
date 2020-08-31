@@ -13,6 +13,15 @@ def get_game_location(input_title: str, games):
     for game in games['Games']:
         if str.lower(input_title) == str.lower(game['Title']):
             return game['Location']
+        elif str.lower(input_title) in str.lower(game['Title']):
+            print('Did you mean: ' + game['Title'] + '? (y/n)')
+            did_you_mean_input = input()
+
+            if did_you_mean_input == 'y' or did_you_mean_input == 'yes':
+                return game['Location']
+            else:
+                continue
+
     print(f'No game found with name: {input_title}')
     return None
 
