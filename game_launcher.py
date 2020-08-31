@@ -33,3 +33,4 @@ while cmd != 'exit':
             game_location = get_game_location(cmd, games)
             if game_location is not None:
                 subprocess.run(game_location)
+                exit()
