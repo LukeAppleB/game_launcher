@@ -9,7 +9,17 @@ def library(games):
         print(game['Title'])
 
 
-def get_game_location(input_title: str, games):
+def display_help():
+    print('---------------- HELP MENU ----------------')
+    print('Available commands:')
+    print('"list" - Displays all the titles in your library')
+    print('"help" - Displays the menu you are looking at now')
+    print('"exit" - Closes the program')
+    print('It will be assumed that anything else entered, is the title of a game you are trying to launch')
+    print('')
+
+
+def get_game_location_with_name(input_title: str, games):
     for game in games['Games']:
         if str.lower(input_title) == str.lower(game['Title']):
             return game['Location']
@@ -19,8 +29,6 @@ def get_game_location(input_title: str, games):
 
             if did_you_mean_input == 'y' or did_you_mean_input == 'yes':
                 return game['Location']
-            else:
-                continue
 
     print(f'No game found with name: {input_title}')
     return None
@@ -36,10 +44,12 @@ while cmd != 'exit':
     with open('games.json') as file:
         games = json.load(file)
 
-        if cmd == 'list':
+        if str.lower(cmd) == 'list':
             library(games)
+        elif str.lower(cmd) == 'help':
+            display_help()
         else:
-            game_location = get_game_location(cmd, games)
+            game_location = get_game_location_with_name(cmd, games)
             if game_location is not None:
                 subprocess.run(game_location)
                 exit()
