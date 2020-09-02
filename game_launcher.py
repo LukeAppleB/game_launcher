@@ -1,7 +1,8 @@
-# need to read game json, display error if any
 import json
+import os
 import subprocess
 
+game_json_location = "C:/dev/game_launcher/games.json"
 
 def library(games):
     games['Games'] = sorted(games['Games'], key=lambda x: x['Title'])
@@ -40,8 +41,10 @@ cmd = None
 
 while cmd != 'exit':
     cmd = input()
+    if cmd == '':
+        continue
 
-    with open('games.json') as file:
+    with open(game_json_location) as file:
         games = json.load(file)
 
         if str.lower(cmd) == 'list':
@@ -51,5 +54,8 @@ while cmd != 'exit':
         else:
             game_location = get_game_location_with_name(cmd, games)
             if game_location is not None:
-                subprocess.run(game_location)
+                if '.lnk' in game_location:
+                    os.startfile(game_location)
+                else:
+                    subprocess.run(game_location)
                 exit()
