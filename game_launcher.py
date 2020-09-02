@@ -29,12 +29,12 @@ def add_game(games):
 
     if '.exe' not in location and '.lnk' not in location:
         print('WARNING - Your location does not point to one of the required filetypes !')
+
     print(f'You are adding the game {title}, located at {location}. Are you sure? (y/n)')
     are_you_sure = input()
 
     if are_you_sure == 'y' or are_you_sure == 'yes':
         games["Games"].append({'Title': f'{title}', 'Location': f'{location}'})
-        print(games)
         with open(game_json_location, 'w') as outfile:
             json.dump(games, outfile)
 
