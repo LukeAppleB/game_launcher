@@ -4,16 +4,23 @@ import subprocess
 
 game_json_location = "C:/dev/game_launcher/games.json"
 
-def library(games):
+def library(games, show_all: bool = False):
     games['Games'] = sorted(games['Games'], key=lambda x: x['Title'])
     for game in games['Games']:
-        print(game['Title'])
+        title = game['Title']
+        location = game['Location']
+
+        if show_all:
+            print(f'Title: {title} - Location: {location}')
+        else:
+            print(game['Title'])
 
 
 def display_help():
     print('---------------- HELP MENU ----------------')
     print('Available commands:')
     print('"list" - Displays all the titles in your library')
+    print('"list -a" - Displays all the titles in your library, and their install locations')
     print('"help" - Displays the menu you are looking at now')
     print('"exit" - Closes the program')
     print('It will be assumed that anything else entered, is the title of a game you are trying to launch')
@@ -49,8 +56,13 @@ while cmd != 'exit':
 
         if str.lower(cmd) == 'list':
             library(games)
+
+        elif str.lower(cmd) == 'list -a':
+            library(games, True)
+
         elif str.lower(cmd) == 'help':
             display_help()
+
         else:
             game_location = get_game_location_with_name(cmd, games)
             if game_location is not None:
