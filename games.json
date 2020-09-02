@@ -1,12 +1,112 @@
 {
   "Games": [
     {
-      "Title": "Sample Game",
+      "Title": "Rocket League",
       "Location": "C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/RocketLeague.exe"
     },
     {
-      "Title": "A Sample Game",
-      "Location": "C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/RocketLeague.exe"
+      "Title": "DOOM",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\DOOM\\DOOMx64.exe"
+    },
+    {
+      "Title": "Brawlhalla",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Brawlhalla\\Brawlhalla.exe"
+    },
+    {
+      "Title": "CivCity Rome",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\CivCity Rome\\CivCity Rome.exe"
+    },
+    {
+      "Title": "Counter-Strike Global Offensive",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\csgo.exe"
+    },
+    {
+      "Title": "Genital Jousting",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GenitalJousting\\GenitalJousting.exe"
+    },
+    {
+      "Title": "Halo The Master Chief Collection",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Halo The Master Chief Collection\\mcclauncher.exe"
+    },
+    {
+      "Title": "King of Crabs",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\King of Crabs\\King of Crabs.exe"
+    },
+    {
+      "Title": "Portal 2",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Portal 2\\portal2.exe"
+    },
+    {
+      "Title": "Pummel Party",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Pummel Party\\PummelParty.exe"
+    },
+    {
+      "Title": "Risk of Rain 2",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Risk of Rain 2\\Risk of Rain 2.exe"
+    },
+    {
+      "Title": "Sid Meier's Civilization V",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Sid Meier's Civilization V\\CivilizationV.exe"
+    },
+    {
+      "Title": "Team Fortress 2",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Team Fortress 2\\hl2.exe"
+    },
+    {
+      "Title": "Tower Unite",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Tower Unite\\Tower.exe"
+    },
+    {
+      "Title": "Star Wars: Knights of the Old Republic",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\swkotor\\swkotor.exe"
+    },
+    {
+      "Title": "Gunfire Reborn",
+      "Location": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Gunfire Reborn\\Gunfire Reborn.exe"
+    },
+    {
+      "Title": "Cities Skylines",
+      "Location": "F:\\Steam Games\\steamapps\\common\\Cities_Skylines\\Cities.exe"
+    },
+    {
+      "Title": "Diablo III",
+      "Location": "C:\\games\\Diablo III\\Diablo III.exe"
+    },
+    {
+      "Title": "Overwatch",
+      "Location": "C:\\games\\overwatch\\Overwatch Launcher.exe"
+    },
+    {
+      "Title": "Tom Clancy's The Division 2",
+      "Location": "C:\\games\\Tom Clancy's The Division 2\\TheDivision2.exe"
+    },
+    {
+      "Title": "Call of Duty Modern Warfare 2019",
+      "Location": "C:\\games\\Call of Duty Modern Warfare\\Modern Warfare Launcher.exe"
+    },
+    {
+      "Title": "IW4X - Call of Duty: Modern Warefare 2",
+      "Location": "C:\\games\\iw4x_full_game\\iw4x.exe"
+    },
+    {
+      "Title": "Apex Legends",
+      "Location": "C:\\Program Files (x86)\\Origin Games\\Apex\\r5apex.exe"
+    },
+    {
+      "Title": "Titanfall 2",
+      "Location": "C:\\Program Files (x86)\\Origin Games\\Titanfall2\\Titanfall2.exe"
+    },
+    {
+      "Title": "Battletoads",
+      "Location": "C:\\Users\\luke\\Documents\\Battletoads - Shortcut.lnk"
+    },
+    {
+      "Title": "Forza Horizon 4",
+      "Location": "C:\\Users\\luke\\Documents\\Forza Horizon 4 - Shortcut.lnk"
+    },
+    {
+      "Title": "Microsoft Flight Simulator",
+      "Location": "C:\\Users\\luke\\Documents\\Microsoft Flight Simulator - Shortcut.lnk"
     }
   ]
 }
