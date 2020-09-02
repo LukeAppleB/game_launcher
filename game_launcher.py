@@ -2,6 +2,10 @@ import json
 import os
 import subprocess
 
+
+# TODO:
+# fix bug where games added in the software are sorted improperly in the list
+
 game_json_location = "C:/dev/game_launcher/games.json"
 
 def library(games, show_all: bool = False):
@@ -14,6 +18,25 @@ def library(games, show_all: bool = False):
             print(f'Title: {title} - Location: {location}')
         else:
             print(game['Title'])
+
+
+def add_game(games):
+    print('Enter the title of the game you would like to add:')
+    title = input()
+
+    print('Enter / paste the location of the exe, or lnk file:')
+    location = input()
+
+    if '.exe' not in location and '.lnk' not in location:
+        print('WARNING - Your location does not point to one of the required filetypes !')
+    print(f'You are adding the game {title}, located at {location}. Are you sure? (y/n)')
+    are_you_sure = input()
+
+    if are_you_sure == 'y' or are_you_sure == 'yes':
+        games["Games"].append({'Title': f'{title}', 'Location': f'{location}'})
+        print(games)
+        with open(game_json_location, 'w') as outfile:
+            json.dump(games, outfile)
 
 
 def display_help():
@@ -59,6 +82,9 @@ while cmd != 'exit':
 
         elif str.lower(cmd) == 'list -a':
             library(games, True)
+
+        elif str.lower(cmd) == 'add':
+            add_game(games)
 
         elif str.lower(cmd) == 'help':
             display_help()
