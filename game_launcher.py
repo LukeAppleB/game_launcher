@@ -35,13 +35,18 @@ def add_game(games):
 
     if are_you_sure == 'y' or are_you_sure == 'yes':
         games["Games"].append({'Title': f'{title}', 'Location': f'{location}'})
-        with open(game_json_location, 'w') as outfile:
-            json.dump(games, outfile)
+        try:
+            with open(game_json_location, 'w') as outfile:
+                json.dump(games, outfile)
+            print('Game added successfully')
+        except Exception as e:
+            print('Something went wrong, game was not added')
 
 
 def display_help():
     print('---------------- HELP MENU ----------------')
     print('Available commands:')
+    print('"add" - Add a game to your library')
     print('"list" - Displays all the titles in your library')
     print('"list -a" - Displays all the titles in your library, and their install locations')
     print('"help" - Displays the menu you are looking at now')
